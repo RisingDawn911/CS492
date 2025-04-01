@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "Marimpa";
+    src: ("font/Marimpa.ttf") format(truetype);
+}
+
+*{
+    margin: 15px;
+    padding: 5px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: #8ECAE6;
+    overflow: hidden;
+    text-align: center;
+    border: 5px solid #023047;
+}
+.navbar a{
+    color: #023047;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: block;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar a:hover{
+    background-color: #4a798f;
+    margin: 15px;
+}
+.navbar li{
+    float:left;
+}
+body {
+    background-color: #219EBC;
+  }
+  
+  h1 {
+    color: #FFB703;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  h3{
+    color: #FFB703;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    font-size: 25px
+  }
+  p {
+    color:#023047;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    font-size: 20px;
+  }
+.pizza{
+    width: 600px;
+    height: auto;
+    border: 2px solid #023047;
+}
