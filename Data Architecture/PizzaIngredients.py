@@ -1,8 +1,15 @@
 from pymongo import MongoClient # Used to connect to the MongoDB
 import pymongo
 
+# This connects to my MongoDB server
+client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering")
+
+# This sets the database and collection (Table) I created.
+db = client["PizzaOrdering"]
+collection = db["PizzaIngredients"]
+
 # This creates the frame for inserting my array of documents into MongoDB
-MenuIngredients = [
+PizzaIngredients = [
   {
     "ItemID": "1CP",
     "ItemName": "Cheese Pizza",
@@ -185,15 +192,8 @@ MenuIngredients = [
   }
 ]
 
-# This connects to my MongoDB server
-client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering")  # Replace with your MongoDB connection string if needed
-
-# This sets the database and collection (Table) I created.
-db = client["PizzaOrdering"]  # Replace "pizza_db" with your desired database name
-collection = db["MenuIngredientInformation"]  # Replace "pizzas" with your desired collection name
-
 # This inserts the data into the collection.
-result = collection.insert_many(MenuIngredients)
+result = collection.insert_many(PizzaIngredients)
 
 #Prints and output statement to show how many documents went into the database.
 print(f"Inserted {len(result.inserted_ids)} documents.")

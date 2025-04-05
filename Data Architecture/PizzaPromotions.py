@@ -1,6 +1,13 @@
 from pymongo import MongoClient # Used to connect to the MongoDB
 import pymongo
 
+# This connects to my MongoDB server
+client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering") 
+
+# This sets the database and collection (Table) I created.
+db = client["PizzaOrdering"]
+collection = db["PizzaPromotions"]
+
 # This creates the frame for inserting my array of documents into MongoDB
 promotions = [
     {
@@ -16,13 +23,6 @@ promotions = [
         "SystemAction": "SELECT [ItemID] WHERE [ItemID] Contains 1CP and IngredientCount >= 5 SET ItemPrice = $12.99 + ($1.99 * [IngredientCount]  - 5)"
     }
 ]
-
-# This connects to my MongoDB server
-client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering")  # Replace with your MongoDB connection string if needed
-
-# This sets the database and collection (Table) I created.
-db = client["PizzaOrdering"]
-collection = db["PizzaPromotionInformation"]
 
 # This inserts the data into the collection.
 result = collection.insert_many(promotions)
