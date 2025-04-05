@@ -1,10 +1,7 @@
-#%%
-import pandas as pd # Used to extract data from Excel Schema
 from pymongo import MongoClient # Used to connect to the MongoDB
-#%%
 import pymongo
 
-# 1. Prepare your data
+# This creates the frame for inserting my array of documents into MongoDB
 MenuIngredients = [
   {
     "ItemID": "1CP",
@@ -188,18 +185,19 @@ MenuIngredients = [
   }
 ]
 
-# 2. Connect to MongoDB
+# This connects to my MongoDB server
 client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering")  # Replace with your MongoDB connection string if needed
 
-# 3. Access your database and collection
+# This sets the database and collection (Table) I created.
 db = client["PizzaOrdering"]  # Replace "pizza_db" with your desired database name
 collection = db["MenuIngredientInformation"]  # Replace "pizzas" with your desired collection name
 
-# 4. Insert the documents
+# This inserts the data into the collection.
 result = collection.insert_many(MenuIngredients)
 
+#Prints and output statement to show how many documents went into the database.
 print(f"Inserted {len(result.inserted_ids)} documents.")
 
-# Close the connection
+# Closes the connection.
 client.close()
-#%%
+
