@@ -18,7 +18,7 @@ promotions = [
 ]
 
 # This connects to my MongoDB server
-client = pymongo.MongoClient("mongodb+srv://devonjgalloway:Aae2V8VVJdk6AzXB@pizzaordering.k8gndlx.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering")
+client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering")  # Replace with your MongoDB connection string if needed
 
 # This sets the database and collection (Table) I created.
 db = client["PizzaOrdering"]
