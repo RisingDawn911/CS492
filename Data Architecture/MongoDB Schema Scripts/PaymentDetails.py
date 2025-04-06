@@ -8,17 +8,24 @@ client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retr
 db = client["PizzaOrderingPayment"]
 collection = db["PaymentDetails"]
 
+# Added an index on the "PaymentID" field to facilitate faster data queries.
+collection.create_index(["PaymentID"])
+
 # This creates the frame for inserting my array of documents into MongoDB
-login = [
+payment = [
     {
-        "Username": "PizzaLover112",
-        "Password": "P!zZ@!sGr3@t",
-        "Email": "admin@pizzastogo.com"
+        "PaymentID": "Test1",
+        "PaymentType": "AMEX",
+        "Debit/CreditID": 2114, #This is the last 4 of a debit or credit.
+        "PaymentDate": "2025-04-05",
+        "PaymentAmount": 100.00,
+        "PaymentCurrency": "USD",
+        "PaymentStatus": 1
     }
 ]
 
 # This inserts the data into the collection.
-result = collection.insert_many(login)
+result = collection.insert_many(payment)
 
 #Prints and output statement to show how many documents went into the database.
 print(f"Inserted {len(result.inserted_ids)} documents.")

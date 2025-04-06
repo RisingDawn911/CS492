@@ -5,8 +5,11 @@ import pymongo
 client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retryWrites=true&w=majority&appName=PizzaOrdering")
 
 # This sets the database and collection (Table) I created.
-db = client["PizzaOrdering"]
+db = client["PizzaOrderingMenu"]
 collection = db["PizzaIngredients"]
+
+# Added an index on the "ItemID" field to facilitate faster data queries.
+collection.create_index(["ItemID"])
 
 # This creates the frame for inserting my array of documents into MongoDB
 PizzaIngredients = [

@@ -8,8 +8,8 @@ client = pymongo.MongoClient("mongodb+srv://removedforsecurity.mongodb.net/?retr
 db = client["PizzaOrderingAdmin"]
 collection = db["WebsiteChangeLog"]
 
-# Added an index on the "LogId" field to facilitate faster data queries.
-collection.create_index(["LogId"])
+# Added an index on the "LogID" field to facilitate faster data queries.
+collection.create_index(["LogID"])
 
 # Added an compound index on the "User" and "ActionDate" fields to facilitate faster data queries.
 collection.create_index(["User", "ActionDate"])
@@ -17,7 +17,7 @@ collection.create_index(["User", "ActionDate"])
 # This creates the frame for inserting my array of documents into MongoDB
 ChangeLog = [
     {
-        "LogId": "Test1",
+        "LogID": "Test1",
         "User": "John Malkovich",
         "Action": "Performed Test on Logs.",
         "ActionDate": "2025/04/05",
