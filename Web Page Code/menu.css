@@ -42,7 +42,12 @@ body {
  hr.dashed {
  	border-top: 3px dashed #023047;
  	border-bottom: none;
- 	margin: 50px;
+ }
+ hr.bottom {
+ 	border-top: 8px solid #023047;
+ 	border-bottom: none;
+ 	border-radius: 5px;
+ 	margin: 800;
  }
 
 
@@ -61,6 +66,7 @@ body {
 	color: #FFB703;
 	font-family: "Marimpa", sans-serif;
 	font-size: 36px;
+	text-align: center;
 }
 .CPt {
 	color: #FFB703;
@@ -96,7 +102,7 @@ body {
 	position:absolute; 
 	left:230; 
 	top: 410;
-	border-radius: 20px
+	border-radius: 20px;
 }
 
 
@@ -115,6 +121,7 @@ body {
 	position: absolute;
 	left:965;
 	top: 330;
+	padding-right: 20;
 }
 .T1p {
 	color: #023047;
@@ -132,5 +139,265 @@ body {
 	position:absolute; 
 	left:970; 
 	top: 410;
+	border-radius: 20px
+}
+
+.T2t {
+	color: #FFB703;
+	font-family: "Marimpa", sans-serif;
+	font-size: 24px;
+	position: absolute;
+	left:225;
+	top: 570;
+}
+.T2d {
+	color: #023047;
+	font-family: "Marimpa", sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:225;
+	top: 630;
+	padding-right: 800;
+}
+.T2p {
+	color: #023047;
+	font-family: sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:600;
+	top: 720;
+	padding-right: 800
+}
+.T2b {
+	border: 30%;
+	background-color: #FB8500;
+	font-size: 16px;
+	padding: 16px 32px;
+	position:absolute; 
+	left:230; 
+	top: 710;
+	border-radius: 20px
+}
+
+.MLt {
+	color: #FFB703;
+	font-family: "Marimpa", sans-serif;
+	font-size: 24px;
+	position: absolute;
+	left:965;
+	top: 570;
+}
+.MLd {
+	color: #023047;
+	font-family: "Marimpa", sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:965;
+	top: 630;
+	padding-right: 20;
+}
+.MLp {
+	color: #023047;
+	font-family: sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:1340;
+	top: 720
+}
+.MLb {
+	border: 30%;
+	background-color: #FB8500;
+	font-size: 16px;
+	padding: 16px 32px;
+	position:absolute; 
+	left:970; 
+	top: 710;
+	border-radius: 20px
+}
+.HWt {
+	color: #FFB703;
+	font-family: "Marimpa", sans-serif;
+	font-size: 24px;
+	position: absolute;
+	left:225;
+	top: 870;
+}
+.HWd {
+	color: #023047;
+	font-family: "Marimpa", sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:225;
+	top: 930;
+	padding-right: 800;
+}
+.HWp {
+	color: #023047;
+	font-family: sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:600;
+	top: 1020;
+	padding-right: 800
+}
+.HWb {
+	border: 30%;
+	background-color: #FB8500;
+	font-size: 16px;
+	padding: 16px 32px;
+	position:absolute; 
+	left:230; 
+	top: 1010;
+	border-radius: 20px
+}
+
+.BQt {
+	color: #FFB703;
+	font-family: "Marimpa", sans-serif;
+	font-size: 24px;
+	position: absolute;
+	left:965;
+	top: 870;
+}
+.BQd {
+	color: #023047;
+	font-family: "Marimpa", sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:965;
+	top: 930;
+	padding-right: 20;
+}
+.BQp {
+	color: #023047;
+	font-family: sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:1340;
+	top: 1020
+}
+.BQb {
+	border: 30%;
+	background-color: #FB8500;
+	font-size: 16px;
+	padding: 16px 32px;
+	position:absolute; 
+	left:970; 
+	top: 1010;
+	border-radius: 20px
+}
+
+
+
+
+.BFt {
+	color: #FFB703;
+	font-family: "Marimpa", sans-serif;
+	font-size: 24px;
+	position: absolute;
+	left:225;
+	top: 1170;
+}
+.BFd {
+	color: #023047;
+	font-family: "Marimpa", sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:225;
+	top: 1230;
+	padding-right: 800;
+}
+.BFp {
+	color: #023047;
+	font-family: sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:600;
+	top: 1320;
+	padding-right: 800
+}
+.BFb {
+	border: 30%;
+	background-color: #FB8500;
+	font-size: 16px;
+	padding: 16px 32px;
+	position:absolute; 
+	left:230; 
+	top: 1310;
+	border-radius: 20px
+}
+
+.VGt {
+	color: #FFB703;
+	font-family: "Marimpa", sans-serif;
+	font-size: 24px;
+	position: absolute;
+	left:965;
+	top: 1170;
+}
+.VGd {
+	color: #023047;
+	font-family: "Marimpa", sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:965;
+	top: 1230;
+	padding-right: 20;
+}
+.VGp {
+	color: #023047;
+	font-family: sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:1340;
+	top: 1320
+}
+.VGb {
+	border: 30%;
+	background-color: #FB8500;
+	font-size: 16px;
+	padding: 16px 32px;
+	position:absolute; 
+	left:970; 
+	top: 1310;
+	border-radius: 20px
+}
+
+
+
+.DXt {
+	color: #FFB703;
+	font-family: "Marimpa", sans-serif;
+	font-size: 24px;
+	position: absolute;
+	left:225;
+	top: 1470;
+}
+.DXd {
+	color: #023047;
+	font-family: "Marimpa", sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:225;
+	top: 1530;
+	padding-right: 800;
+}
+.DXp {
+	color: #023047;
+	font-family: sans-serif;
+	font-size: 14px;
+	position: absolute;
+	left:600;
+	top: 1620;
+	padding-right: 800
+}
+.DXb {
+	border: 30%;
+	background-color: #FB8500;
+	font-size: 16px;
+	padding: 16px 32px;
+	position:absolute; 
+	left:230; 
+	top: 1610;
 	border-radius: 20px
 }
