@@ -23,7 +23,7 @@ body {
  }
  .nbar a:hover{
      background-color: #4a798f;
-
+ 
  }
  .nbar li{
      float:left;
@@ -53,4 +53,24 @@ body {
      font-family: "Marimpa", sans-serif;
      font-size: 36px;
      text-align: center;
+}
+.txt {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     position: absolute;
+     text-align: center;
+     left: 500;
+     top: 270;
+}
+.rtm {
+     border: 30%;
+     background-color: #FB8500;
+     font-size: 16px;
+     padding: 16px 32px;
+     position:absolute; 
+     left: 670; 
+     top: 400;
+     border-radius: 20px;
+     
 }
