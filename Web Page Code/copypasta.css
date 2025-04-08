@@ -23,7 +23,7 @@ body {
  }
  .nbar a:hover{
      background-color: #4a798f;
- 
+
  }
  .nbar li{
      float:left;
@@ -53,3 +53,4 @@ body {
      font-family: "Marimpa", sans-serif;
      font-size: 36px;
      text-align: center;
+}
