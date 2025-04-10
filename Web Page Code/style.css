@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Marimpa";
-    src: ("font/Marimpa.ttf") format(truetype);
+    src: url("C:/Users/Gallo/OneDrive/Documents/GitHub/CS492/Web Page Code/Marimpa.ttf") format("truetype");
 }
 
 *{

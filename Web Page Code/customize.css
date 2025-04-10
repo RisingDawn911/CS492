@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Marimpa";
+    src: url("C:/Users/Gallo/OneDrive/Documents/GitHub/CS492/Web Page Code/Marimpa.ttf") format("truetype");
+}
+
 body {
 	background-color: #219EBC;
 }
