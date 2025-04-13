@@ -3,10 +3,7 @@
     src: url("C:/Users/Gallo/OneDrive/Documents/GitHub/CS492/Web Page Code/Marimpa.ttf") format("truetype");
 }
 
-*{
-    margin: 15px;
-    padding: 5px;
-}
+
 .navbar ul{
     list-style-type: none;
     background-color: #8ECAE6;
@@ -27,8 +24,7 @@
 }
 .navbar a:hover{
     background-color: #4a798f;
-    margin: 15px;
-}
+}    
 .navbar li{
     float:left;
 }
@@ -41,7 +37,7 @@ body {
     text-align: center;
     font-family: "Marimpa", sans-serif;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 48px;
   }
   h3{
     color: #FFB703;
