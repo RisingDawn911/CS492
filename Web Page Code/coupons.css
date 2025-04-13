@@ -2,7 +2,7 @@
 /* This sources our font pack from the Repo */
 @font-face {
     font-family: "Marimpa";
-    src: url("C:/Users/Gallo/OneDrive/Documents/GitHub/CS492/Web Page Code/Marimpa.ttf") format("truetype");
+    src: url("Marimpa.ttf") format("truetype");
 }
 /* This sets the overall page background to the blue color we chose for the website */
 body {
