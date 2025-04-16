@@ -1,7 +1,8 @@
 @font-face {
-    font-family: "Marimpa";
-    src: url("C:/Users/Gallo/OneDrive/Documents/GitHub/CS492/Web Page Code/Marimpa.ttf") format("truetype");
+     font-family: "Marimpa";
+     src: url("Marimpa.ttf") format("truetype");
 }
+
 
 body {
 	background-color: #219EBC;
@@ -12,12 +13,13 @@ body {
      overflow: hidden;
      text-align: center;
      border: 5px solid #023047;
+     padding: 0;
+     margin: 0;
  }
  .nbar a{
      color: #023047;
      text-decoration: none;
-     padding-right: 20px;
-     padding-left: 20px;
+     padding: 10px 20px;
      display: block;
      text-align: center;
      font-family: "Marimpa", sans-serif;
@@ -25,11 +27,13 @@ body {
      font-weight: bold;
  }
  .nbar a:hover{
-     background-color: #4a798f;
+     transform: scale(1.50);
+     transition: transform 0.2s ease-in-out;
  
  }
  .nbar li{
      float:left;
+     width:auto;
  }
 
 /*Top bar, place under title*/
