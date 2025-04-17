@@ -166,8 +166,8 @@ PizzaIngredients = [
       { "Name": "Bacon", "Portion": "None"},
       { "Name": "Chicken", "Portion": "None" },
       { "Name": "Ham", "Portion": "None" },
-      { "Name": "Green Pepper", "Portion": "None" },
-      { "Name": "Pineapple", "Portion": "Normal" },
+      { "Name": "Green Pepper", "Portion": "Normal" },
+      { "Name": "Pineapple", "Portion": "None" },
       { "Name": "Mushroom", "Portion": "Normal" },
       { "Name": "Red Onion", "Portion": "Normal" },
       { "Name": "Sweet Onion", "Portion": "Normal" }
