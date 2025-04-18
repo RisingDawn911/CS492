@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Marimpa";
+    src: url("Marimpa.ttf") format("truetype");
+}
+
+
+.navbar ul{
+  list-style-type: none;
+  background-color: #8ECAE6;
+  overflow: hidden;
+  text-align: center;
+  border: 5px solid #023047;
+  padding: 0;
+  margin: 0;
+}
+.navbar a{
+  color: #023047;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+  font-family: "Marimpa", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  transform: scale(1.50);
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar li{
+    float:left;
+    width: auto;
+}
+body {
+    background-color: #219EBC;
+  }
+  
+  h1 {
+    color: #FFB703;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+  }
+  .titleText {
+    color: #FFB703;
+    font-family: "Marimpa", sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+  hr.title-separator {
+    border-top: 3px solid #023047; /* Adjust as needed */
+    border-bottom: none;
+    width: auto; /* Adjust width as needed */
+    margin: 10px auto 20px auto; 
+  }
+ 
+
+  h3{
+    color: #FFB703;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    font-size: 25px
+  }
+  p {
+    color:#023047;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    font-size: 20px;
+  }
+.pizza{
+    display: block;
+    width: 1200px;
+    height: auto;
+    border: 2px solid #023047;
+    margin-right: auto;
+    margin-left: auto;
+}

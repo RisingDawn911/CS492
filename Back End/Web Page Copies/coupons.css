@@ -1,0 +1,154 @@
+
+/* This sources our font pack from the Repo */
+@font-face {
+    font-family: "Marimpa";
+    src: url("Marimpa.ttf") format("truetype");
+}
+/* This sets the overall page background to the blue color we chose for the website */
+body {
+    background-color: #219EBC;
+}
+/* This formats the Navbar at the top of the page */
+.nbar ul {
+    list-style-type: none;
+    background-color: #8ECAE6;
+    overflow: hidden;
+    text-align: center;
+    border: 5px solid #023047;
+    padding: 0;
+    margin: 0;
+}
+/* This formats the Navbars title elements (Home, Menu, Coupons, Cart) */
+.nbar a {
+    color: #023047;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    font-family: "Marimpa", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* This increases the size of the element text when hovered over. */
+.nbar a:hover {
+    transform: scale(1.50);
+    transition: transform 0.2s ease-in-out;
+}
+/* (4/12/2025) DJ: Commented out color highlight as hover size increase looked better to me. Feel free to swap back. */
+/* This adjusts the color of the Navbar when you hover over and item. *//*
+.nbar a:hover {
+    background-color: #4a798f;
+}*/
+/* This sets the alignment for the Navbar items. */
+.nbar li {
+    float: left;
+    width: auto;
+}
+
+/* This formats the page title (Coupons and Promotions) just below the Navbar */
+.titleText {
+    color: #FFB703;
+    font-family: "Marimpa", sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+/* This adds a separator line between the title and the promotions */
+hr.title-separator {
+    border-top: 3px solid #023047; /* Adjust as needed */
+    border-bottom: none;
+    width: auto; /* Adjust width as needed */
+    margin: 10px auto 20px auto; /* Adjust margins as needed */
+}
+
+/* This defines the UI spacing and behaviors for the promotions containers */
+#coupons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the coupons horizontally */
+    align-items: stretch; /* Align coupons to the top */
+}
+
+/* This sets the overall container behaviors for the promotion information */
+#coupons-container div {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #023047;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+/* This formats the card titles (Promotion Name) fetched from the API under promotion.PromotionName */
+.T1 {
+    color: #FFB703;
+    font-family: "Marimpa", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+/* This formats the card descriptions (Promotion Description) fetched from the API under promotion.PromotionDescription */
+.P1 {
+    color: #023047;
+    font-family: "Marimpa", sans-serif;
+    font-size: 14px;
+    margin-bottom: auto;
+}
+/* This is the button formatting for the Add to Order called in the API tags. */
+.B1 {
+    background-color: #FB8500;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+/* This increases the size of the element text when hovered over. */
+.B1:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+/* (4/12/2025) DJ: Commented out this section as it wasn't needed anymore since we moved to dynamic placement above */
+/*
+.rect1t,
+.rect1b {
+    height: 5px;
+    width: 100%;
+    background-color: #023047;
+    position: absolute;
+    left: 0;
+}
+
+.rect1t {
+    top: 0;
+}
+
+.rect1b {
+    bottom: 0;
+}
+
+.rect1l,
+.rect1r {
+    width: 5px;
+    background-color: #023047;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.rect1l {
+    left: 0;
+}
+
+.rect1r {
+    right: 0;
+}
+.rect2t,
+.rect2b,
+.rect2l,
+.rect2r {
+    display: none;
+}*/

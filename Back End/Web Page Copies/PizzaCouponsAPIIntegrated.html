@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coupons-pizzawebsite.com</title>
+    <meta name="description" content="Pizza customization page of www.pizzacompany.com">
+    <link rel="stylesheet" href="coupons.css">
+</head>
+
+<body>
+<nav class="nbar">
+    <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="PizzaMenu.html">Menu</a></li>
+        <li><a href="PizzaCoupons.html">Coupons</a></li>
+        <li><a href="PizzaCart.html">Cart</a></li>
+    </ul>
+</nav>
+
+<h1 class="titleText">Coupons and Promotions</h1>
+<hr class="title-separator">
+<div id="coupons-container"></div>
+<p style="text-align: center; font-size: 16px; font-weight: bold;">Contact: +1(987)-6543 PizzaWebsite@gmail.com</p>
+
+<script>
+    // This fetches the data from the server pulling in the MongoDB promotions data
+    fetch('http://localhost:3000/PizzaPromotions')
+        .then(response => response.json()) // Parses the respone from the API as JSON
+        .then(data => {
+            // This grabs the container where the results will be added to.
+            const couponsContainer = document.getElementById('coupons-container');
+
+            // This loops through each promotion in the data and creates a new Div for them. (See CSS code)
+            data.forEach(promotion => {
+                // Create a new div for each coupon
+                const couponDiv = document.createElement('div');
+
+                // This actually populates the Div with the details pulled from the MongoDB database
+                couponDiv.innerHTML = `
+                        <h1 class="T1">${promotion.PromotionName}</h1>
+                        <p class="P1">${promotion.PromotionDescription}</p>
+                        <button class="B1">Add to Order</button>
+                    `;
+
+                // This appends the resulting loop to the Dic set and continues doing so till it has all the promotions
+                couponsContainer.appendChild(couponDiv);
+            });
+        })
+        .catch(error => {
+            // This handles potential errors in the process and outputs text in the container for it instead.
+            console.error('Error fetching promotions:', error);
+            couponsContainer.textContent = 'Failed to load coupons.';
+        });
+</script>
+</body>
+
+</html>

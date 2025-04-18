@@ -1,0 +1,83 @@
+@font-face {
+     font-family: "Marimpa";
+     src: url("Marimpa.ttf") format("truetype");
+}
+
+
+body {
+	background-color: #219EBC;
+}
+.nbar ul{
+     list-style-type: none;
+     background-color: #8ECAE6;
+     overflow: hidden;
+     text-align: center;
+     border: 5px solid #023047;
+     padding: 0;
+     margin: 0;
+ }
+ .nbar a{
+     color: #023047;
+     text-decoration: none;
+     padding: 10px 20px;
+     display: block;
+     text-align: center;
+     font-family: "Marimpa", sans-serif;
+     text-transform: uppercase;
+     font-weight: bold;
+ }
+ .nbar a:hover{
+     transform: scale(1.50);
+     transition: transform 0.2s ease-in-out;
+ 
+ }
+ .nbar li{
+     float:left;
+     width:auto;
+ }
+
+/*Top bar, place under title*/
+ hr.rounded {
+ 	border-top: 8px solid #023047;
+ 	border-bottom: none;
+ 	border-radius: 5px;
+ }
+ /*only use if needed to seperate elements/change of topic on page*/
+ hr.dashed {
+     border-top: 3px dashed #023047;
+     border-bottom: none;
+ }
+ /*bottom bar, goes at bottom of page, change margin-top to whatevr looks best*/
+ hr.bottom {
+ 	border-top: 8px solid #023047;
+ 	border-bottom: none;
+ 	border-radius: 5px;
+ 	margin-top: 400;
+ }
+/*For use directly under navbar, directly above top bar(hr.rounded) */
+ .titleText {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 36px;
+     text-align: center;
+}
+.txt {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     position: absolute;
+     text-align: center;
+     left: 500;
+     top: 270;
+}
+.rtm {
+     border: 30%;
+     background-color: #FB8500;
+     font-size: 16px;
+     padding: 16px 32px;
+     position:absolute; 
+     left: 670; 
+     top: 400;
+     border-radius: 20px;
+     
+}
