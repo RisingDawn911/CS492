@@ -1,0 +1,45 @@
+<!-- ✅ PizzaMenu_test.html (Styled + Functional) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Menu</title>
+  <link rel="stylesheet" href="style_test.css">
+</head>
+<body>
+
+<h1>Our Pizza Menu 🍕</h1>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="homepage_test.html">Home</a></li>
+    <li><a href="PizzaMenu_test.html">Menu</a></li>
+    <li><a href="PizzaCustomize_TEST.html">Customize Pizza</a></li>
+    <li><a href="PizzaCart_TEST.html">Cart</a></li>
+    <li><a href="PizzaCoupons_test.html">Coupons</a></li>
+  </ul>
+</nav>
+
+<main style="text-align:center;">
+  <h3>Choose a preset pizza to customize it further</h3>
+
+  <div>
+    <button onclick="customizePreset('1CP')">🧀 Cheese Pizza</button>
+    <button onclick="customizePreset('6VEG')">🥦 Veggie Pizza</button>
+    <button onclick="customizePreset('2ML')">🥓 Meat Lovers</button>
+  </div>
+</main>
+
+<script>
+function customizePreset(itemId) {
+  localStorage.setItem("presetPizzaId", itemId);
+  window.location.href = "PizzaCustomize_TEST.html";
+}
+</script>
+
+</body>
+</html>
+
+
+
+

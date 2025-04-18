@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart</title>
+  <meta name="description" content="View your pizza cart">
+  <link rel="stylesheet" href="style_test.css">
+</head>
+<body>
+  <h1>Your Cart</h1>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage_test.html">Home</a></li>
+      <li><a href="PizzaMenu_test.html">Menu</a></li>
+      <li><a href="PizzaCustomize_TEST.html">Customize Pizza</a></li>
+      <li><a href="PizzaCart_TEST.html">Cart</a></li>
+      <li><a href="PizzaCoupons_test.html">Coupons</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="cartItems"></div>
+    <h3 id="totalPrice">Total: $0.00</h3>
+    <button onclick="checkout()">Proceed to Checkout</button>
+  </main>
+
+  <script>
+    // Sample cart data; replace with actual data retrieval logic
+    const cart = [
+      { name: 'Cheese Pizza', price: 9.99 },
+      { name: 'Veggie Pizza', price: 11.99 }
+    ];
+
+    const cartItemsDiv = document.getElementById('cartItems');
+    let total = 0;
+
+    cart.forEach(item => {
+      const itemDiv = document.createElement('div');
+      itemDiv.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+      cartItemsDiv.appendChild(itemDiv);
+      total += item.price;
+    });
+
+    document.getElementById('totalPrice').textContent = `Total: $${total.toFixed(2)}`;
+
+    function checkout() {
+      alert('Proceeding to checkout...');
+      // Implement checkout functionality here
+    }
+  </script>
+</body>
+</html>
+
+

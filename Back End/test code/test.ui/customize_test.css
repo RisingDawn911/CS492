@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Marimpa";
+    src: url("C:/Users/Gallo/OneDrive/Documents/GitHub/CS492/Web Page Code/Marimpa.ttf") format("truetype");
+}
+
+body {
+	background-color: #219EBC;
+}
+.nbar ul{
+     list-style-type: none;
+     background-color: #8ECAE6;
+     overflow: hidden;
+     text-align: center;
+     border: 5px solid #023047;
+ }
+ .nbar a{
+     color: #023047;
+     text-decoration: none;
+     padding-right: 20px;
+     padding-left: 20px;
+     display: block;
+     text-align: center;
+     font-family: "Marimpa", sans-serif;
+     text-transform: uppercase;
+     font-weight: bold;
+ }
+ .nbar a:hover{
+     background-color: #4a798f;
+ 
+ }
+ .nbar li{
+     float:left;
+ }
+
+
+ hr.rounded {
+ 	border-top: 8px solid #023047;
+ 	border-bottom: none;
+ 	border-radius: 5px;
+ }
+ hr.bottom {
+ 	border-top: 8px solid #023047;
+ 	border-bottom: none;
+ 	border-radius: 5px;
+ 	margin-top: 400;
+ }
+
+.titleText {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 36px;
+     text-align: center;
+}
+
+.headerText {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 36px;
+     text-align: left;
+     left: ;
+     top: ;
+}
+
+.sectionText {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     text-align: left;
+}
+
+.toppingText {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 18px;
+     text-align: left;
+}
+
+
+.hT1 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 36px;
+     text-align: left;
+     position: absolute;
+     left: 160;
+     top: 200;
+}
+
+.hT2 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 36px;
+     text-align: left;
+     position: absolute;
+     left: 960;
+     top: 200;
+}
+
+
+
+.sT1 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     text-align: left;
+     position:absolute;
+     left: 750;
+     top: 280;
+}
+.sT2 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     text-align: left;
+     position:absolute;
+     left: 750;
+     top: 450;
+}
+.sT3 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     text-align: left;
+     position:absolute;
+     left: 1100;
+     top: 280;
+}
+.sT4 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     text-align: left;
+     position:absolute;
+     left: 750;
+     top: 620;

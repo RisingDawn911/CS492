@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "Marimpa";
+    src: url("C:/Users/Gallo/OneDrive/Documents/GitHub/CS492/Web Page Code/Marimpa.ttf") format("truetype");
+}
+
+body {
+	background-color: #219EBC;
+}
+.nbar ul{
+     list-style-type: none;
+     background-color: #8ECAE6;
+     overflow: hidden;
+     text-align: center;
+     border: 5px solid #023047;
+ }
+ .nbar a{
+     color: #023047;
+     text-decoration: none;
+     padding-right: 20px;
+     padding-left: 20px;
+     display: block;
+     text-align: center;
+     font-family: "Marimpa", sans-serif;
+     text-transform: uppercase;
+     font-weight: bold;
+ }
+ .nbar a:hover{
+     background-color: #4a798f;
+
+ }
+ .nbar li{
+     float:left;
+ }
+
+/*Top bar, place under title*/
+ hr.rounded {
+ 	border-top: 8px solid #023047;
+ 	border-bottom: none;
+ 	border-radius: 5px;
+ }
+ /*only use if needed to seperate elements/change of topic on page*/
+ hr.dashed {
+     border-top: 3px dashed #023047;
+     border-bottom: none;
+ }
+ /*bottom bar, goes at bottom of page, change margin-top to whatevr looks best*/
+ hr.bottom {
+ 	border-top: 8px solid #023047;
+ 	border-bottom: none;
+ 	border-radius: 5px;
+ 	margin-top: 400;
+ }
+/*For use directly under navbar, directly above top bar(hr.rounded) */
+ .titleText {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 36px;
+     text-align: center;
+}
+.T1 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     position: absolute;
+     left:225;
+     top: 270;
+}
+.P1 {
+     color: #023047;
+     font-family: "Marimpa", sans-serif;
+     font-size: 14px;
+     position: absolute;
+     left:225;
+     top: 330;
+     padding-right: 800;
+}
+.B1 {
+     border: 30%;
+     background-color: #FB8500;
+     font-size: 16px;
+     padding: 16px 32px;
+     position:absolute; 
+     left:270; 
+     top: 410;
+     border-radius: 20px;
+}
+.T2 {
+     color: #FFB703;
+     font-family: "Marimpa", sans-serif;
+     font-size: 24px;
+     position: absolute;
+     left:925;
+     top: 270;
+}
+.P2 {
+     color: #023047;
+     font-family: "Marimpa", sans-serif;
+     font-size: 14px;
+     position: absolute;
+     left:925;
+     top: 330;
+     padding-right: 20;
+}
+.B2 {
+     border: 30%;
+     background-color: #FB8500;
+     font-size: 16px;
+     padding: 16px 32px;
+     position:absolute; 
+     left:970; 
+     top: 410;
+     border-radius: 20px;
+}
+.rect1t {
+     height:5px;
+     width: 500px;
+     background-color: #023047;
+     position:absolute;
+     top: 280;
+     left: 215;
+}
+.rect1b {
+     height:5px;
+     width: 500px;
+     background-color: #023047;
+     position:absolute;
+     top: 480;
+     left: 215;
+}
+.rect1l {
+     height: 200px;
+     width: 5px;
+     background-color: #023047;
+     position:absolute;
+     top: 280;
+     left: 215;
+}
+.rect1r {
+     height: 205px;
+     width: 5px;
+     background-color: #023047;
+     position:absolute;
+     top: 280;
+     left: 715;
+}
+
+
+
+.rect2t {
+     height:5px;
+     width: 500px;
+     background-color: #023047;
+     position:absolute;
+     top: 280;
+     left: 915;
+}
+.rect2b {
+     height:5px;
+     width: 500px;
+     background-color: #023047;
+     position:absolute;
+     top: 480;
+     left: 915;
+}
+.rect2l {
+     height: 200px;
+     width: 5px;
+     background-color: #023047;
+     position:absolute;
+     top: 280;
+     left: 915;
+}
+.rect2r {
+     height: 205px;
+     width: 5px;
+     background-color: #023047;
+     position:absolute;
+     top: 280;
+     left: 1415;
+}

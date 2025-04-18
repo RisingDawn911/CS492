@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Website (Test)</title>
+  <link rel="stylesheet" href="style_test.css">
+</head>
+
+<body>
+  <h1>Pizza Website</h1>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage_test.html">Home</a></li>
+      <li><a href="PizzaMenu_test.html">Menu</a></li>
+      <li><a href="PizzaCustomize_TEST.html">Customize Pizza</a></li>
+      <li><a href="PizzaCart_TEST.html">Cart</a></li>
+      <li><a href="PizzaCoupons_test.html">Coupons</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Inside the <main> section of homepage_test.html -->
+<h3>Choose a Preset Pizza to Customize:</h3>
+<div>
+  <button onclick="selectPreset('1CP')">🧀 Cheese Pizza</button>
+  <button onclick="selectPreset('6VEG')">🥦 Veggie Pizza</button>
+  <button onclick="selectPreset('2ML')">🥓 Meat Lovers</button>
+</div>
+
+<script>
+  function selectPreset(presetId) {
+    // Store the presetId in localStorage
+    localStorage.setItem('selectedPreset', presetId);
+    // Redirect to the customization page
+    window.location.href = 'PizzaCustomize_TEST.html';
+  }
+</script>
+
+
+  <!-- You can replace this with a real image -->
+  <img src="https://via.placeholder.com/600x400?text=Pizza+Homepage+Image" alt="Pizza image" class="pizza">
+</body>
+</html>

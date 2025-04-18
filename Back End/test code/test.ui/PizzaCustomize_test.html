@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customize Your Pizza</title>
+  <meta name="description" content="Customize your pizza">
+  <link rel="stylesheet" href="style_test.css">
+</head>
+<body>
+  <h1>Customize Your Pizza!</h1>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage_test.html">Home</a></li>
+      <li><a href="PizzaMenu_test.html">Menu</a></li>
+      <li><a href="PizzaCustomize_TEST.html">Customize Pizza</a></li>
+      <li><a href="PizzaCart_TEST.html">Cart</a></li>
+      <li><a href="PizzaCoupons_test.html">Coupons</a></li>
+    </ul>
+  </nav>
+
+  <form id="pizzaForm">
+    <h2>Choose Size</h2>
+    <label><input type="radio" name="pizzaSize" value="Small"> Small</label>
+    <label><input type="radio" name="pizzaSize" value="Medium"> Medium</label>
+    <label><input type="radio" name="pizzaSize" value="Large"> Large</label>
+
+    <h2>Choose Cheese</h2>
+    <label><input type="radio" name="pizzaCheese" value="Normal"> Normal</label>
+    <label><input type="radio" name="pizzaCheese" value="Heavy"> Extra</label>
+    <label><input type="radio" name="pizzaCheese" value="NoCheese"> No Cheese</label>
+
+    <h2>Choose Sauce</h2>
+    <label><input type="radio" name="pizzaSauce" value="Red"> Red Sauce</label>
+    <label><input type="radio" name="pizzaSauce" value="BBQ"> BBQ Sauce</label>
+    <label><input type="radio" name="pizzaSauce" value="Buffalo"> Buffalo Sauce</label>
+
+    <h2>Choose Toppings</h2>
+    <label><input type="checkbox" name="pizzaTop" value="Pepperoni"> Pepperoni</label>
+    <label><input type="checkbox" name="pizzaTop" value="Bacon"> Bacon</label>
+    <label><input type="checkbox" name="pizzaTop" value="Sausage"> Sausage</label>
+    <label><input type="checkbox" name="pizzaTop" value="Ham"> Ham</label>
+    <label><input type="checkbox" name="pizzaTop" value="Mushroom"> Mushroom</label>
+    <label><input type="checkbox" name="pizzaTop" value="Red Onion"> Red Onion</label>
+    <label><input type="checkbox" name="pizzaTop" value="Green Pepper"> Green Pepper</label>
+    <label><input type="checkbox" name="pizzaTop" value="Pineapple"> Pineapple</label>
+    <label><input type="checkbox" name="pizzaTop" value="Sweet Onion"> Sweet Onion</label>
+
+    <br><br>
+    <button type="submit">Add to Cart</button>
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const presetId = localStorage.getItem('selectedPreset');
+      if (presetId) {
+        fetchPresetDetails(presetId);
+      }
+    });
+
+    function fetchPresetDetails(presetId) {
+      const presets = {
+        '1CP': { size: 'Medium', cheese: 'Normal', sauce: 'Red', toppings: ['Pepperoni'] },
+        '6VEG': { size: 'Large', cheese: 'Heavy', sauce: 'Red', toppings: ['Mushroom', 'Green Pepper', 'Red Onion'] },
+        '2ML': { size: 'Large', cheese: 'Normal', sauce: 'BBQ', toppings: ['Bacon', 'Sausage', 'Ham'] }
+      };
+
+      const preset = presets[presetId];
+      if (preset) {
+        document.querySelector(`input[name="pizzaSize"][value="${preset.size}"]`).checked = true;
+        document.querySelector(`input[name="pizzaCheese"][value="${preset.cheese}"]`).checked = true;
+        document.querySelector(`input[name="pizzaSauce"][value="${preset.sauce}"]`).checked = true;
+        preset.toppings.forEach(topping => {
+          const toppingInput = document.querySelector(`input[name="pizzaTop"][value="${topping}"]`);
+          if (toppingInput) {
+            toppingInput.checked = true;
+          }
+        });
+      }
+    }
+
+    document.getElementById("pizzaForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const size = document.querySelector('input[name="pizzaSize"]:checked')?.value;
+      const cheese = document.querySelector('input[name="pizzaCheese"]:checked')?.value;
+      const sauce = document.querySelector('input[name="pizzaSauce"]:checked')?.value;
+      const toppingInputs = document.querySelectorAll('input[name="pizzaTop"]:checked');
+      const selectedToppings = Array.from(toppingInputs).map(input => input.value);
+
+      let ingredients = [];
+      if (cheese && cheese !== "NoCheese") {
+        ingredients.push({ Name: "Cheese Blend", Portion: cheese === "Heavy" ? "Extra" : "Normal" });
+      }
+      if (sauce) {
+        ingredients.push({ Name: sauce + " Sauce", Portion: "Normal" });
+      }
+      selectedToppings.forEach(t => {
+        ingredients.push({ Name: t, Portion: "Normal" });
+      });
+
+      const payload = {
+        ItemID: "CUSTOM",
+        SelectedIngredients: ingredients,
+        SizeID: size === "Small" ? "SZ1" : size === "Medium" ? "SZ2" : "SZ3"
+      };
+
+      fetch("http://localhost:3001/api/customPizza/price", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      })
+      .then(res => res.json())
+      .then(priceData => {
+        return fetch("http://localhost:3001/api/cart", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            userId: "test-user-ui",
+            pizza: { ...payload, FinalPrice: priceData.FinalPrice }
+          })
+        });
+      })
+      .then(res => res.json())
+      .then(() => {
+        alert("Pizza added to cart!");
+        window.location.href = "PizzaCart_TEST.html";
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
